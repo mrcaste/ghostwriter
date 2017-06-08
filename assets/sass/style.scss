@@ -107,7 +107,7 @@ table {
     margin-bottom:40px;
     width: 100%;
 
-    tbody > tr:nth-child(odd) > td, 
+    tbody > tr:nth-child(odd) > td,
     tbody > tr:nth-child(odd) > th {
         background-color: #f7f7f3;
     }
@@ -275,6 +275,10 @@ table {
     margin: 15px 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+.post-title a {
+    color: #424242;
 }
 
 .page-title { margin: 15px 40px; }
@@ -593,7 +597,7 @@ table {
         margin-top: 5px;
     }
 
-    .post-date, 
+    .post-date,
     .blog-description,
     .author-meta {
         margin-top: 20px;
@@ -662,13 +666,13 @@ table {
         line-height: 1.2;
     }
 
-    .post-date, 
+    .post-date,
     .blog-description,
     .author-meta {
         line-height: 1.6;
     }
 
-    .post-date, 
+    .post-date,
     .blog-description,
     .author-meta {
         margin-top: 10px;

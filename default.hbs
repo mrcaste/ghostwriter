@@ -22,6 +22,7 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+
 </head>
 <body class="{{body_class}}">
 
@@ -33,13 +34,23 @@
                         <a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
                     {{else}}
                         <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-
-                        <a class="button-square" href="{{@blog.url}}/rss"><i class="fa fa-rss"></i></a>
                     {{/if}}
                 </div>
 
+                <div class="site-social-links">
+                    <ul class="site-nav">
+                      {{!-- Put your social links --}}
+                      <li class="site-nav-item"><a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                      <li class="site-nav-item"><a href="#" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                      <li class="site-nav-item"><a href="#" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                      <li class="site-nav-item"><a href="#" target="_blank"><i class="fa fa-youtube fa-2x"></i></a></li>
+                      <li class="site-nav-item"><a href="{{@blog.url}}/rss"><i class="fa fa-rss fa-2x"></i></a></li>
+                      <li class="site-nav-item"><a href="mailto:user@mail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
+                    </ul>
+                </div>
+
                 <ul class="site-nav">
-                    <li class="site-nav-item"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">Latest Post</a></li>
+                    <li class="site-nav-item"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">Latest Posts</a></li>
                     <li class="site-nav-item"><a class="js-ajax-link js-show-index" title="{{@blog.title}}" href="{{@blog.url}}">Browse Posts</a></li>
 
                     {{navigation}}
@@ -50,7 +61,7 @@
                 </ul>
             </div>
         </header>
-    
+
         <div id="ajax-container">
             {{{body}}}
         </div>
@@ -71,7 +82,7 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script type="text/javascript">  
+    <script type="text/javascript">
     if (typeof jQuery == 'undefined') {
         document.write('<script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></'+'script>');
     }

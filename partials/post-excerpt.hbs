@@ -1,0 +1,24 @@
+<article class="post-container {{post_class}}">
+    <header class="post-header">
+        <h2 class="post-title">
+            <a class="" title="{{title}} | {{@blog.title}}" href="{{url}}">
+                {{title}}
+            </a>
+        </h2>
+
+        <p class="post-date">Published <time datetime="{{published_at}}">{{date format="MMMM Do YYYY"}}</time> <strong>by {{author}}</strong></p>
+    </header>
+
+    <div class="post-content clearfix">
+        {{#if image}}
+            <img class="post-featured-image" src="{{image}}">
+        {{/if}}
+        <p class="lead">{{excerpt words="26"}} <a class="read-more" href="{{url}}"> Leer más...</a></p>
+    </div>
+
+    <footer class="post-footer clearfix">
+        {{#if tags}}
+            <p class="post-tags"><span>Tags:</span> {{tags}}</p>
+        {{/if}}
+    </footer>
+</article>

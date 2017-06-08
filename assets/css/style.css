@@ -212,7 +212,7 @@ table {
 .site-nav {
   list-style: none;
   margin: 28px 0 10px;
-  padding-left:	0px; }
+  padding-left: 0; }
 
 .site-nav-item {
   display: inline-block;
@@ -245,6 +245,9 @@ table {
   margin: 15px 0;
   text-align: center;
   text-transform: uppercase; }
+
+.post-title a {
+  color: #424242; }
 
 .page-title {
   margin: 15px 40px; }
